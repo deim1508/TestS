@@ -73,6 +73,7 @@ class SetEventDetailViewController: BaseViewController {
     }()
     private let eventTypeLabel: GeneralLabel = {
         let label = GeneralLabel(type: .eventType)
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
