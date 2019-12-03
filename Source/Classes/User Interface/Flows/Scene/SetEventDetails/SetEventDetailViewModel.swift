@@ -15,7 +15,8 @@ enum EventType {
     case conference
     case privateEvent
     case party
-    case none
+    case none(szam: Int)
+    case none(szoveg: String)
 
     var name: String {
         switch self {
@@ -27,6 +28,8 @@ enum EventType {
             return "Party"
         case .none:
             return "None"
+        default:
+            return ""
         }
     }
 }
@@ -58,9 +61,11 @@ class SetEventDetailViewModelImpl: SetEventDetailViewModel {
     var selectedEventTypeIndex: Int = -1
     var imageUrl: String? = ""
     let event: Event
+    let lista = [1,2,3,]
 
     init(event: Event) {
         self.event = event
+        
     }
 
     func didSelectEventType(at index: Int) {

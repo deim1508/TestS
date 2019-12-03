@@ -71,8 +71,11 @@ class SetEventDetailViewController: BaseViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
+    
+    
     private let eventTypeLabel: GeneralLabel = {
         let label = GeneralLabel(type: .eventType)
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
