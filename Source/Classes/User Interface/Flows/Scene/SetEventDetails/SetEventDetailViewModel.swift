@@ -15,7 +15,8 @@ enum EventType {
     case conference
     case privateEvent
     case party
-    case none
+    case none(szam: Int)
+    case none(szoveg: String)
 
     var name: String {
         switch self {
@@ -27,6 +28,8 @@ enum EventType {
             return "Party"
         case .none:
             return "None"
+        default:
+            return ""
         }
     }
 }
